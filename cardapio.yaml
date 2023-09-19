@@ -1,0 +1,25 @@
+swagger: "2.0"
+info:
+  title: Cardápio
+  description: Gerenciamento de cardápio de Restaurantes.
+  version: 1.0.0
+host: restaurant.cardapio.com
+schemes:
+  - http
+
+paths:
+  /users:
+    get:
+      summary: Returna o item criado  do usuário.
+      description: Usuário faz requisição de inserir item pelo método GET.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Upload de item realizado com sucesso
+        422:
+         description:  Dados de requisição inválida
+        400:
+         description: Parâmetros inválidos
+        500:
+         description: Erro ao realizar a inserção de dados
